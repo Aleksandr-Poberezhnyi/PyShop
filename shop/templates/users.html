@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+  </head>
+  <body>
+    <header>All Users</header>
+    <main>
+        <ol>
+            {% for user in users %}
+                
+                <li><h1 style = ''>{{user.username}}</h1></li>
+                <h2>{{user.email}}</h2>
+                <br>
+                <hr>
+
+            {% endfor %}
+        </ol>
+        <a href="{{url_for('register')}}">click here</a>
+        <img src="{{url_for('static', filename = 'images/im.png')}}">
+    
+    </main>
+    <footer>Спасибо, что пользуетесть нашим сайтом</footer>
+  </body>
+</html>
